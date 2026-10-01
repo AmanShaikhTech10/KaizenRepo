@@ -1,0 +1,68 @@
+/* src/assets/styles/global.css */
+
+:root {
+  /* GLOBAL COLORS */
+  --brand-blue: #1e3a8a;
+  --brand-accent: #d32f2f;
+  --brand-accent-hover: #b71c1c;
+  
+  /* LIGHT THEME GLASSMORPHISM */
+  /* A subtle gradient background makes the glass effect visible */
+  --bg-primary: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --bg-secondary: rgba(255, 255, 255, 0.4);
+  
+  /* Semi-transparent card backgrounds */
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --border-color: rgba(255, 255, 255, 0.5);
+  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+  
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  
+  /* Universal Glass Blur */
+  --glass-blur: blur(16px);
+  --transition-speed: 0.3s;
+}
+
+[data-theme='dark'] {
+  /* DARK THEME GLASSMORPHISM */
+  --bg-primary: linear-gradient(135deg, #0f172a 0%, #1e1e2f 100%);
+  --bg-secondary: rgba(15, 23, 42, 0.4);
+  
+  /* Semi-transparent dark cards */
+  --card-bg: rgba(30, 41, 59, 0.45);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+}
+
+/* 
+  GLOBAL GLASSMORPHISM TARGETING
+  This automatically applies the blur effect to every component 
+  we've built without you having to edit their individual files!
+*/
+.pricing-card, 
+.location-premium-card, 
+.service-card, 
+.portfolio-card,
+.glass-card,
+.navbar {
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+* {
+  box-sizing: border-box;
+}

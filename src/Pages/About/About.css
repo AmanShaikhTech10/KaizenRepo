@@ -1,0 +1,226 @@
+/* src/pages/About/About.css */
+
+.about-page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Header */
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-header .badge {
+  background-color: rgba(30, 58, 138, 0.1);
+  color: var(--brand-blue);
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .about-header .badge {
+  background-color: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.about-header .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.7;
+}
+
+/* Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2.5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Cards (Inherits glass blur from global.css via .glass-card) */
+.content-card, .sidebar-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.content-card h2, .sidebar-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-card p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.work-environment {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(30, 58, 138, 0.05);
+  color: var(--brand-blue);
+  padding: 0.75rem 1.25rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+[data-theme='dark'] .work-environment {
+  background-color: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+}
+
+/* Strategy List */
+.strategy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.strategy-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--brand-accent);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Skills Progress Bars */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(128, 128, 128, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-accent));
+  border-radius: 10px;
+  transition: width 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Testimonial */
+.testimonial-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-accent));
+  color: white;
+  border: none;
+}
+
+.quote-icon {
+  font-family: Georgia, serif;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9) !important; /* Override content-card p */
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.testimonial-author strong {
+  font-size: 1.1rem;
+}
+
+.testimonial-author span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* Twitter Widget */
+.twitter-header {
+  color: #1DA1F2 !important;
+}
+
+.tweet-text {
+  font-size: 0.95rem;
+  margin-bottom: 0 !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-main-content, .about-sidebar {
+    width: 100%;
+  }
+}

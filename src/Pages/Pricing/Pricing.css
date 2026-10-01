@@ -1,0 +1,243 @@
+/* src/pages/Pricing/Pricing.css */
+
+.pricing-page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-header .badge {
+  background-color: rgba(30, 58, 138, 0.1);
+  color: var(--brand-blue);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+[data-theme='dark'] .pricing-header .badge {
+  background-color: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+}
+
+.pricing-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.pricing-header .subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+/* Modern Grid Layout */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+  align-items: stretch;
+}
+
+/* Premium Card Shape & Glassmorphism */
+.pricing-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  position: relative;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  z-index: 1;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .pricing-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.card-content {
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  background: inherit;
+  border-radius: 24px;
+}
+
+/* Most Popular Glow Effect */
+.popular-card {
+  border: 1px solid var(--brand-accent);
+}
+
+.popular-glow {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--brand-accent), var(--brand-blue));
+  border-radius: 26px;
+  z-index: 0;
+  opacity: 0.15;
+  filter: blur(10px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-accent));
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+}
+
+/* Typography Inside Card */
+.tier-header {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tier-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.target-audience {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.billing-cycle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Elegant Features List */
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  flex-grow: 1;
+}
+
+.features-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.check-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(30, 58, 138, 0.05);
+  color: var(--brand-blue);
+  flex-shrink: 0;
+}
+
+[data-theme='dark'] .check-wrapper {
+  background-color: rgba(96, 165, 250, 0.1);
+  color: #60a5fa;
+}
+
+/* Modern Pill Buttons */
+.get-started-btn {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.btn-primary {
+  background-color: var(--brand-accent);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(211, 47, 47, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+}
+
+[data-theme='dark'] .btn-secondary:hover {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+
+.get-started-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.get-started-btn:hover svg {
+  transform: translateX(4px);
+}
