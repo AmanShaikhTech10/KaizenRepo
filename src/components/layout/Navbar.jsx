@@ -25,7 +25,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img 
-            src="public\favicon.png" 
+            src="/favicon.png" 
             alt="Kaizen Softservices Logo" 
           />
         </Link>
