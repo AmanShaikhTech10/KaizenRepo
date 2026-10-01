@@ -25,7 +25,7 @@ const Navbar = () => {
         {/* Logo Section */}
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           <img 
-            src="https://www.kaizensoftservices.com/assets/corporate/img/logos/logo-corp-red.png" 
+            src="src\assets\images\logo-corp-red.png" 
             alt="Kaizen Softservices Logo" 
           />
         </Link>
