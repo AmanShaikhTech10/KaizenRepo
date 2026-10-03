@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // We will create these components next
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/common/ScrollToTop';
 
 // Page Imports
 import Home from "./pages/Home/Home";
@@ -16,9 +17,10 @@ import Contact from './pages/Contact/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       {/* Navbar sits outside Routes so it persists across page changes */}
       <Navbar />
-      
+
       <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

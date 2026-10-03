@@ -1,5 +1,11 @@
 /* src/assets/styles/global.css */
 
+/* FIX: Lock the viewport to prevent horizontal scroll bouncing */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
 :root {
   /* GLOBAL COLORS */
   --brand-blue: #1e3a8a;

@@ -5,7 +5,8 @@
   top: 0;
   width: 100%;
   height: 80px;
-  background: var(--card-bg); /* Uses the transparent global variable */
+  background: var(--card-bg);
+  /* Uses the transparent global variable */
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
   transition: all var(--transition-speed) ease;
@@ -81,7 +82,8 @@
 }
 
 .navbar-links .contact-btn::after {
-  display: none; /* Removes underline from button */
+  display: none;
+  /* Removes underline from button */
 }
 
 .navbar-links .contact-btn:hover {
@@ -149,4 +151,14 @@
   .mobile-menu-icon {
     display: block;
   }
+}
+
+.navbar-links a.contact-btn.active,
+.navbar-links a.contact-btn:hover {
+  color: #ffffff !important;
+}
+
+/* FIX: Prevent mobile menu from bleeding over page content */
+.navbar {
+  z-index: 9999;
 }

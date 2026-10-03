@@ -224,3 +224,8 @@
     width: 100%;
   }
 }
+[data-theme='dark'] .testimonial-card p,
+[data-theme='dark'] .testimonial-card .testimonial-author strong,
+[data-theme='dark'] .testimonial-card .testimonial-author span {
+  color: #ffffff !important;
+}

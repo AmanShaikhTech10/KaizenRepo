@@ -69,7 +69,7 @@ const Career = () => {
       {/* Open Positions Section */}
       <div className="positions-section">
         <h2 className="section-title">Open Positions</h2>
-        
+
         <div className="positions-list">
           {openPositions.map((job) => (
             <div key={job.id} className="glass-card position-card">
@@ -80,7 +80,7 @@ const Career = () => {
                 </div>
                 <h3>{job.title}</h3>
                 <p className="job-desc">{job.description}</p>
-                
+
                 <div className="job-tags">
                   {job.tags.map((tag, i) => (
                     <span key={i} className="tech-chip">{tag}</span>
@@ -97,7 +97,7 @@ const Career = () => {
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                   {job.experience}
                 </div>
-                <a href="mailto:info@kaizensoftservices.com?subject=Application for [Job Title]" className="apply-btn">
+                <a href={`mailto:info@kaizensoftservices.com?subject=Application for ${job.title}`} className="apply-btn">
                   Apply Now
                 </a>
               </div>
