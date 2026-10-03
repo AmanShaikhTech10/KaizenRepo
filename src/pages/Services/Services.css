@@ -128,3 +128,29 @@
 .learn-more-btn:hover svg {
   transform: translateX(4px);
 }
+
+.service-card {
+  opacity: 0;
+  animation: premiumSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Perfect Mobile Arrangement */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Force single column */
+    gap: 1.5rem;
+  }
+  .service-card {
+    padding: 2rem 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+}

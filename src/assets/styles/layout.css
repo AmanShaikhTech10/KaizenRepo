@@ -33,3 +33,40 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* Responsiveness */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Changed from center for better mobile flow */
+  text-align: center;
+  /* Premium smooth slide-up effect */
+  opacity: 0;
+  animation: premiumSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes premiumSlideUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px) scale(0.98); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1); 
+  }
+}
+
+/* Mobile Layout Padding Fix */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 2rem 1.5rem;
+  }
+  .page-container h1 {
+    font-size: 2.2rem;
+  }
+}

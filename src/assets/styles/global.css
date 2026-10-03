@@ -66,3 +66,21 @@ body {
 * {
   box-sizing: border-box;
 }
+
+*, *::before, *::after {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* FIX: Prevent Contact button text from disappearing on click/visited states */
+.contact-btn, 
+.contact-btn:visited, 
+.contact-btn:active, 
+.contact-btn:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Base Link Reset */
+a:visited, a:active {
+  color: inherit;
+}

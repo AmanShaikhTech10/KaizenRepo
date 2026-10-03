@@ -241,3 +241,31 @@
 .get-started-btn:hover svg {
   transform: translateX(4px);
 }
+.pricing-card {
+  opacity: 0;
+  animation: premiumSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pricing-card:nth-child(1) { animation-delay: 0.1s; }
+.pricing-card:nth-child(2) { animation-delay: 0.25s; }
+.pricing-card:nth-child(3) { animation-delay: 0.4s; }
+
+@media (max-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .pricing-header h1 {
+    font-size: 2.2rem;
+  }
+  .card-content {
+    padding: 2rem 1.5rem;
+  }
+  .price {
+    font-size: 2.5rem;
+  }
+  /* Remove hover lift on mobile to prevent accidental clipping */
+  .pricing-card:hover {
+    transform: none; 
+  }
+}
